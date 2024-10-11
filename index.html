@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skibidi Snake</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    >
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center text-white my-4">Skibidi Snake</h1>
+        <div class="row">
+
+            <!-- Leaderboard -->
+            <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
+                <div id="board" class="p-3 bg-transparent">
+                    <h2></h2>
+                    <ul id="leaderboard" class="list-unstyled"></ul>
+                    <button id="clearLeaderboard" class="btn btn-danger mt-3">Clear Leaderboard</button>
+                </div>
+            </div>
+
+            <!-- Game Area -->
+            <div class="col-lg-6 col-md-4 col-sm-12 mb-4 text-center">
+                <canvas id="gameBoard" width="500" height="500"></canvas>
+                <div id="scoreText">0</div>
+                <button id="reset" class="btn btn-primary mt-3" onclick="resetGame()">Restart</button>
+            </div>
+
+            <!-- Instructions -->
+            <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
+                <div id="inst" class="p-3 bg-transparent">
+                    <h3>INSTRUCTIONS</h3>
+                    <p>If the current player wants to play again, simply click the restart button.</p>
+                    <p>If a new player wants to join, refresh the browser to enter their name and start a new game.</p>
+                    <p>To update your score on the leaderboard, be sure to use the same username if you're playing again after a break.</p>
+                    <p>Use UP, DOWN, LEFT, RIGHT arrow keys to control the snake.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script 
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.11/dist/umd/popper.min.js">
+    </script>
+    <script 
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>

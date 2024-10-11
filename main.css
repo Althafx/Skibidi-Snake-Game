@@ -1,0 +1,147 @@
+/* General Styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("img/wallpaperflare.com_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -webkit-text-stroke: 0.1px black;
+}
+
+h2, h3 {
+  color: white;
+}
+
+/* Gameboard Glass Effect */
+#gameBoard {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+
+/* Leaderboard Glass Box */
+#board {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);  
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 20px; 
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Instructions Glass Box */
+#inst {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);  
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 20px; 
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Adjusting Leaderboard List */
+#leaderboard {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px; 
+}
+
+#leaderboard li {
+  background-color: rgba(255, 255, 255, 0.1); 
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Button Style for Leaderboard */
+#clearLeaderboard {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.7); 
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#clearLeaderboard:hover {
+  background-color: rgba(255, 0, 0, 1); 
+}
+
+#scoreText {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+#reset {
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#reset:hover {
+  background-color: red;
+}
+
+/* Responsive Design for Larger Devices */
+@media (min-width: 768px) {
+  .container-fluid {
+      padding: 20px;
+  }
+  
+  #board, #inst {
+      height: fit-content;
+  }
+  
+  #clearLeaderboard {
+      width: 100%;
+  }
+}
+
+/* Responsive Design for Small Devices */
+@media (max-width: 767px) {
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  #scoreText {
+      font-size: 1.5rem;
+  }
+
+  #gameBoard {
+      max-width: 100%;
+  }
+
+  #board, #inst {
+      width: 100%;
+      text-align: center;
+  }
+
+  #inst p {
+      text-align: center;
+  }
+}
